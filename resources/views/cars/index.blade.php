@@ -1,5 +1,5 @@
-<x-layout title="Séries">
-    <a href="/series/criar">Adicionar</a>
+<x-layout title="Marcas">
+    <a href="/marcas/criar">Adicionar</a>
 
     <ul>
         @foreach ($series as $serie)

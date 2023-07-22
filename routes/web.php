@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BrandsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BrandsController::class, 'index']);
+Route::get('/marcas/', [BrandsController::class, 'index']);
+Route::get('/marcas/cadastrar/', [BrandsController::class, 'create']);
+Route::post('/marcas/salvar/', [BrandsController::class, 'store']);
